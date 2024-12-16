@@ -6,10 +6,6 @@ skyshapython is a lightweight and intuitive Python library designed to simplify 
 
 ---
 
-**Note** - As long as the library is in version `0.x.x` I am not actively looking after this. When I do intend to start managing and supporting this more seriously, I will upgrade to versions `1.0` and above. Thank you.
-
----
-
 ## Installation
 
 You can install skyshapython directly from PyPI:
@@ -17,6 +13,14 @@ You can install skyshapython directly from PyPI:
 ```bash
 pip install skyshapython
 ```
+
+---
+
+## Links
+
+- **PyPI**: [skyshapython on PyPI](https://pypi.org/project/skyshapython/)
+- **GitHub**: [skyshapython Repository](https://github.com/skywalker94/skyshapython)
+- **Website**: [Author Website](https://cv.sharangdeo.online/)
 
 ---
 
@@ -132,15 +136,21 @@ A versatile class that provides a variety of sorting algorithms, including basic
 > Supports sorting using algorithms like QuickSort, MergeSort, Timsort, IntroSort, and even a custom multi-threaded sorting implementation.
 
 Sorting Methods:
-- BubbleSort
-- SelectionSort
-- QuickSort
-- MergeSort
-- InsertionSort
-- HeapSort
-- Timsort
-- IntroSoft
-- ThreadSort (custom sorting solution)
+- Bubble Sort: A simple comparison-based sorting algorithm.
+- Selection Sort: A comparison-based sorting method that repeatedly selects the smallest element.
+- Quick Sort: A divide-and-conquer sorting algorithm, often the fastest for large datasets.
+- Merge Sort: A stable, comparison-based sorting algorithm using the divide-and-conquer approach.
+- Insertion Sort: A comparison-based sorting method that builds the sorted list one element at a time.
+- Heap Sort: A comparison-based sorting algorithm based on binary heaps.
+- Timsort:  A hybrid sorting algorithm derived from MergeSort and InsertionSort, used in Python's built-in sorting.
+- Intro Soft: A hybrid sorting algorithm combining QuickSort, HeapSort, and InsertionSort.
+- Thread Sort: A multi-threaded sorting algorithm that uses multiple threads to speed up sorting on large datasets. (custom sorting solution)
+
+Amusing Methods:
+- Sleep Sort: A quirky and inefficient sorting algorithm that "sleeps" for a duration proportional to each number’s value and outputs them in order of completion.
+- Bogosort: A highly inefficient and random sorting algorithm that repeatedly shuffles the list until it happens to be sorted.
+
+> I cannot recommend the 'amusing' sorting methods. They can work, but they are very inefficient. The inspiration behind them was simply 'because I can'.
 
 **Usage:**
 
@@ -221,13 +231,6 @@ print(fastest_algo)  # Output: 'QuickSort', 'MergeSort', 'Timsort', or 'IntroSor
 
 ---
 
-## Links
-
-- **PyPI**: [skyshapython on PyPI](https://pypi.org/project/skyshapython/)
-- **GitHub**: [skyshapython Repository](https://github.com/skywalker94/skyshapython)
-
----
-
 ## License
 
 skyshapython is licensed under the **MIT License**, which means you are free to use, modify, and distribute the library in both personal and commercial projects. Contributions are always welcome, so feel free to fork the repository and create pull requests for improvements or new features.
@@ -251,6 +254,8 @@ furnished to do so, subject to the following conditions:
 ## Contributing
 
 Contributions are welcome! Feel free to submit issues or pull requests on the [GitHub repository](https://github.com/skywalker94/skyshapython).
+
+**Note** - As long as the library is in version `0.x.x` I am not actively looking after this. When I do intend to start managing and supporting this more seriously, I will upgrade to versions `1.0` and above. Thank you.
 
 ---
 
