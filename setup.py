@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='skyshapython',
-    version='0.2.0',
+    version='0.2.1',
     packages=find_packages(),
     description='A Python library for utilities and wrappers for frequently used functionality.',
     long_description=open('README.md').read(),
