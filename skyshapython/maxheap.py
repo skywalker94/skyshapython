@@ -44,7 +44,8 @@ class MaxHeap:
         
         if self._heap:
             num = min(num, len(self._heap))  # Ensure we don't pop more than available
-            return [-heapq.heappop(self._heap) for _ in range(num)]
+            result = [-heapq.heappop(self._heap) for _ in range(num)]
+            return result[0] if num == 1 else result  # Return single item if num=1
         raise IndexError("pop from an empty MaxHeap")
 
     def pushpop(self, items):
