@@ -117,6 +117,8 @@ furnished to do so, subject to the following conditions:
 
 Contributions are welcome! Feel free to submit issues or pull requests on the [GitHub repository](https://github.com/skywalker94/skyshapython).
 
+**Note** - As long as the library is in version `0.x.x` I am not actively looking after this. When I do intend to start managing and supporting this more seriously, I will upgrade to versions above `1.0`.
+
 ---
 
 ## Author
