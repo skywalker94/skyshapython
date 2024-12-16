@@ -9,39 +9,58 @@ class MinHeap:
         """Use a list to store the heap elements."""
         self._heap = []
 
-    def push(self, item):
+    def push(self, items):
         """
-        Adds an item to the heap.
+        Adds one or more items to the heap.
 
         Usage:
             your_min_heap.push(value)
+            or
+            your_min_heap.push([value1, value2, value3])
         """
-        heapq.heappush(self._heap, item)
+        if isinstance(items, list):
+            for item in items:
+                heapq.heappush(self._heap, item)
+        else:
+            heapq.heappush(self._heap, items)
 
-    def pop(self):
+    def pop(self, num=1):
         """
-        Removes and returns the smallest item from the heap.
+        Removes and returns the smallest item(s) from the heap.
 
         Usage:
             smallest_value = your_min_heap.pop()
+            or
+            smallest_values = your_min_heap.pop(3)  # Pop the top 3 smallest items
         """
+        if not isinstance(num, int) or num < 1:
+            num = 1  # Default to popping 1 item if the input is invalid
+        
         if self._heap:
-            return heapq.heappop(self._heap)
+            num = min(num, len(self._heap))  # Ensure we don't pop more than available
+            return [heapq.heappop(self._heap) for _ in range(num)]
         raise IndexError("pop from an empty MinHeap")
 
-    def pushpop(self, item):
+    def pushpop(self, items):
         """
-        Adds an item to the heap and removes/returns the smallest item.
+        Adds one or more items to the heap and removes/returns the smallest item(s).
         This is more efficient than calling push() followed by pop().
 
         Usage:
             smallest_value = your_min_heap.pushpop(some_value)
+            or
+            smallest_values = your_min_heap.pushpop([value1, value2])
         """
-        if self._heap:
-            return heapq.heappushpop(self._heap, item)
-        # If the heap is empty, the new item becomes the only element
-        # and is immediately popped.
-        return item
+        if isinstance(items, list):
+            # Add all items to the heap
+            for item in items:
+                heapq.heappush(self._heap, item)
+            # Pop the smallest item(s)
+            return [heapq.heappop(self._heap) for _ in range(min(len(items), len(self._heap)))]
+        else:
+            heapq.heappush(self._heap, items)
+            # Pop the smallest item
+            return heapq.heappop(self._heap)
 
     def peek(self):
         """
