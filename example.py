@@ -1,49 +1,16 @@
 from skyshapython import MaxHeap, MinHeap
 
+vals = [1, 77, 82, 15, 22, 43, 9, 8, 321, -3, 0]
+print(f"Raw Values: {vals}")
 max_heap = MaxHeap()
-max_heap.push(10)
-max_heap.push(20)
-max_heap.push(5)
-
-# Example 1: Using __len__
-print(len(max_heap))  # Output: 3
-
-# Example 2: Using __bool__
-if max_heap:
-    print("Heap is not empty")  # Output: Heap is not empty
-
-# Removing all elements
-max_heap.pop()
-max_heap.pop()
-max_heap.pop()
-
-if not max_heap:
-    print("Heap is empty")  # Output: Heap is empty
-
 min_heap = MinHeap()
 
-# Add some elements
-min_heap.push(10)
-min_heap.push(20)
-min_heap.push(5)
+max_heap.push(vals)
+min_heap.push(vals)
 
-# Pop the smallest item
-print(min_heap.pop())  # Output: 5
+print(f"Ascending values: {min_heap.pop(50)}")
+print(f"Descending values: {max_heap.pop(50)}")
 
-# Push and pop in one operation
-print(min_heap.pushpop(15))  # Output: 10
-
-# Peek at the smallest item
-print(min_heap.peek())  # Output: 15
-
-# Example of len() and bool()
-print(len(min_heap))  # Output: 2
-if min_heap:
-    print("Heap is not empty")  # Output: Heap is not empty
-
-# Clear the heap
-min_heap.pop()
-min_heap.pop()
-
-if not min_heap:
-    print("Heap is empty")  # Output: Heap is empty
+#One step approach
+print(f"Ascending values:{min_heap.pushpop(vals)}")
+print(f"Descending values:{max_heap.pushpop(vals)}")
