@@ -6,11 +6,31 @@ def test_top_k_largest():
     data = [15, 20, 5, 10, 25, 1]
     k = 3
 
-    # MinHeap keeps elements sorted by smallest
     heap = MaxHeap(data)
     top_k = heap.pop(k)
     
     assert top_k == [25, 20, 15]
+
+def test_sorting_descending_with_pushpop():
+    """Test whether sorting in reverse order is possible with pushpop."""
+    data = [4, 8, 12, 9, 3, 1, 5]
+
+    heap = MaxHeap()
+    assert heap.pushpop(data) == [12, 9, 8, 5, 4, 3, 1]
+
+def test_sorting_descending_with_popall():
+    """Test whether sorting works with feeding values and using popall."""
+    data = [4, 8, 12, 9, 3, 1, 5]
+
+    heap = MaxHeap(data)
+    assert heap.popall() == [12, 9, 8, 5, 4, 3, 1]
+
+def test_sorting_descending_with_pop():
+    """Test whether sorting works with using pop for a value greater than the contents."""
+    data = [4, 8, 12, 9, 3, 1, 5]
+
+    heap = MaxHeap(data)
+    assert heap.pop(len(heap) + 1) == [12, 9, 8, 5, 4, 3, 1]
 
 def test_init_with_empty():
     """Test initializing an empty MaxHeap."""
@@ -88,6 +108,12 @@ def test_empty_pop():
     heap = MaxHeap()
     with pytest.raises(IndexError):
         heap.pop()
+
+def test_empty_pop_multiple():
+    """Test multi-pop operation when empty"""
+    heap = MaxHeap()
+    with pytest.raises(IndexError):
+        heap.pop(2)
 
 def test_len_and_bool():
     """Test len() and boolean behavior."""
