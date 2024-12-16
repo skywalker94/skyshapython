@@ -126,6 +126,101 @@ print(len(min_heap))
 
 ---
 
+### **SortMaster**
+A versatile class that provides a variety of sorting algorithms, including basic sorting techniques as well as multi-threaded and optimized approaches.
+
+> Supports sorting using algorithms like QuickSort, MergeSort, Timsort, IntroSort, and even a custom multi-threaded sorting implementation.
+
+Sorting Methods:
+- BubbleSort
+- SelectionSort
+- QuickSort
+- MergeSort
+- InsertionSort
+- HeapSort
+- Timsort
+- IntroSoft
+- ThreadSort (custom sorting solution)
+
+**Usage:**
+
+```python
+from skyshapython import SortMaster
+
+# Initialize the SortMaster instance
+sort_master = SortMaster()
+
+# Sorting with BubbleSort (ascending and descending order)
+arr = [5, 2, 9, 1, 5, 6]
+sorted_asc = sort_master.bubble_sort(arr.copy(), reverse=False)
+sorted_desc = sort_master.bubble_sort(arr.copy(), reverse=True)
+
+print(sorted_asc)  # Output: [1, 2, 5, 5, 6, 9]
+print(sorted_desc)  # Output: [9, 6, 5, 5, 2, 1]
+
+# Sorting with SelectionSort (ascending and descending order)
+sorted_asc = sort_master.selection_sort(arr.copy(), reverse=False)
+sorted_desc = sort_master.selection_sort(arr.copy(), reverse=True)
+
+print(sorted_asc)  # Output: [1, 2, 5, 5, 6, 9]
+print(sorted_desc)  # Output: [9, 6, 5, 5, 2, 1]
+
+# Sorting with QuickSort
+sorted_asc = sort_master.quick_sort(arr.copy(), reverse=False)
+sorted_desc = sort_master.quick_sort(arr.copy(), reverse=True)
+
+print(sorted_asc)  # Output: [1, 2, 5, 5, 6, 9]
+print(sorted_desc)  # Output: [9, 6, 5, 5, 2, 1]
+
+# Sorting with MergeSort
+sorted_asc = sort_master.merge_sort(arr.copy(), reverse=False)
+sorted_desc = sort_master.merge_sort(arr.copy(), reverse=True)
+
+print(sorted_asc)  # Output: [1, 2, 5, 5, 6, 9]
+print(sorted_desc)  # Output: [9, 6, 5, 5, 2, 1]
+
+# Sorting with InsertionSort
+sorted_asc = sort_master.insertion_sort(arr.copy(), reverse=False)
+sorted_desc = sort_master.insertion_sort(arr.copy(), reverse=True)
+
+print(sorted_asc)  # Output: [1, 2, 5, 5, 6, 9]
+print(sorted_desc)  # Output: [9, 6, 5, 5, 2, 1]
+
+# Sorting with HeapSort
+sorted_asc = sort_master.heap_sort(arr.copy(), reverse=False)
+sorted_desc = sort_master.heap_sort(arr.copy(), reverse=True)
+
+print(sorted_asc)  # Output: [1, 2, 5, 5, 6, 9]
+print(sorted_desc)  # Output: [9, 6, 5, 5, 2, 1]
+
+# Sorting with Timsort
+sorted_asc = sort_master.timsort(arr.copy(), reverse=False)
+sorted_desc = sort_master.timsort(arr.copy(), reverse=True)
+
+print(sorted_asc)  # Output: [1, 2, 5, 5, 6, 9]
+print(sorted_desc)  # Output: [9, 6, 5, 5, 2, 1]
+
+# Sorting with IntroSort
+sorted_asc = sort_master.introsort(arr.copy(), reverse=False)
+sorted_desc = sort_master.introsort(arr.copy(), reverse=True)
+
+print(sorted_asc)  # Output: [1, 2, 5, 5, 6, 9]
+print(sorted_desc)  # Output: [9, 6, 5, 5, 2, 1]
+
+# Sorting with ThreadSort (multi-threaded sorting)
+sorted_asc = sort_master.thread_sort(arr.copy(), reverse=False)
+sorted_desc = sort_master.thread_sort(arr.copy(), reverse=True)
+
+print(sorted_asc)  # Output: [1, 2, 5, 5, 6, 9]
+print(sorted_desc)  # Output: [9, 6, 5, 5, 2, 1]
+
+# Finding the fastest sorting algorithm
+fastest_algo = sort_master.fastest(arr.copy(), reverse=False)
+print(fastest_algo)  # Output: 'QuickSort', 'MergeSort', 'Timsort', or 'IntroSort'
+```
+
+---
+
 ## Links
 
 - **PyPI**: [skyshapython on PyPI](https://pypi.org/project/skyshapython/)
@@ -166,5 +261,7 @@ Contributions are welcome! Feel free to submit issues or pull requests on the [G
 - [Website](https://cv.sharangdeo.online)
 
 **Note** - To be fair I do not know how often I will check back with this library and look through suggested pull requests as so on.. At the time of writing this up I just wanted to make heaps easier for myself (I detest the heapq syntax. It feels like such a chore & I often forget it). In the future, I may add mode functionality to this and change my approach toward this tiny library. But until then.. godspeed!
+
+---
 
 Happy coding with **skyshapython**! 🎉
