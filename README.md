@@ -25,6 +25,8 @@ pip install skyshapython
 ### **MaxHeap**
 A simple wrapper for Python's `heapq` module, providing an easy-to-use MaxHeap implementation.
 
+> Supports pushing single values or lists, and popping single or multiple values.
+
 **Usage:**
 
 ```python
@@ -38,26 +40,39 @@ max_heap.push(10)
 max_heap.push(20)
 max_heap.push(5)
 
+# Add multiple items at once
+max_heap.push([50, 30, 40])
+
 # Get the largest item
 largest = max_heap.pop()
-print(largest)  # Output: 20
+print(largest)  # Output: 50 (the largest value)
 
 # Peek at the largest item without removing it
-print(max_heap.peek())  # Output: 10
+print(max_heap.peek())  # Output: 40 (the next largest)
 
-# Add and pop in one operation
+# Add and pop in one operation (adding a single item)
 max_heap.pushpop(15)  # Adds 15 and removes the largest element
-print(max_heap.pop())  # Output: 10
+
+# Add and pop multiple items in one operation
+max_heap.pushpop([100, 200])  # Adds [100, 200], pops and returns the 2 largest values
+
+# It can pop multiple items at once
+max_heap.pop(2) # Outputs 2 largest values in order
 
 # Check if the heap is empty
 if max_heap:
     print("Heap is not empty")
+
+# check length of the heap, number of values in it
+print(len(max_heap))
 ```
 
 ---
 
 ### **MinHeap**
 A clean wrapper for Python's `heapq` module, providing an intuitive MinHeap implementation.
+
+> Supports pushing single values or lists, and popping single or multiple values.
 
 **Usage:**
 
@@ -72,20 +87,31 @@ min_heap.push(10)
 min_heap.push(20)
 min_heap.push(5)
 
+# Add multiple items at once
+min_heap.push([50, 30, 40])
+
 # Get the smallest item
 smallest = min_heap.pop()
-print(smallest)  # Output: 5
+print(smallest)  # Output: 5 (the smallest value)
 
 # Peek at the smallest item without removing it
-print(min_heap.peek())  # Output: 10
+print(min_heap.peek())  # Output: 10 (the next smallest)
 
-# Add and pop in one operation
+# Add and pop in one operation (adding a single item)
 min_heap.pushpop(15)  # Adds 15 and removes the smallest element
-print(min_heap.pop())  # Output: 15
+
+# Add and pop multiple items in one operation
+min_heap.pushpop([100, 200])  # Adds [100, 200], pops and returns the 2 smallest values
+
+# It can pop multiple items at once
+min_heap.pop(2)  # Outputs 2 smallest values in order
 
 # Check if the heap is empty
 if not min_heap:
     print("Heap is empty")
+
+# Check length of the heap, number of values in it
+print(len(min_heap))
 ```
 
 ---
