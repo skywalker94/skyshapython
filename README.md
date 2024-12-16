@@ -119,14 +119,12 @@ Contributions are welcome! Feel free to submit issues or pull requests on the [G
 
 ---
 
----
-
 ## Author
 
 **skywalker94**
 - [GitHub Profile](https://github.com/skywalker94)
 - [Website](https://cv.sharangdeo.online)
 
-**Note** - To be fair I do not know how often I will check back with this library and look through suggested pull requests as so on.. At the time of writing this up I just wanted to make heaps easier for myself (I detest the heapq syntax. It feels like such a chore & I often forget it). In the future, I may add mode functionality to this and change my approach toward this tiny library. But until then.. happy coding!
+**Note** - To be fair I do not know how often I will check back with this library and look through suggested pull requests as so on.. At the time of writing this up I just wanted to make heaps easier for myself (I detest the heapq syntax. It feels like such a chore & I often forget it). In the future, I may add mode functionality to this and change my approach toward this tiny library. But until then.. godspeed!
 
 Happy coding with **skyshapython**! 🎉
