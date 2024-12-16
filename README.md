@@ -32,8 +32,10 @@ A simple wrapper for Python's `heapq` module, providing an easy-to-use MaxHeap i
 ```python
 from skyshapython import MaxHeap
 
-# Initialize the MaxHeap
-max_heap = MaxHeap()
+# Initialize the MaxHeap as default, with a value, or list
+max_heap = MaxHeap() # default
+max_heap_value = MaxHeap(5) # with a value
+max_heap_list = MaxHeap([5, 2, 7, 4, 1, 9]) # with a list
 
 # Add items to the heap
 max_heap.push(10)
@@ -79,8 +81,10 @@ A clean wrapper for Python's `heapq` module, providing an intuitive MinHeap impl
 ```python
 from skyshapython import MinHeap
 
-# Initialize the MinHeap
-min_heap = MinHeap()
+# Initialize the MinHeap as default, with a value, or list
+min_heap = MinHeap() # default
+min_heap_value = MinHeap(5) # with a value
+min_heap_list = MinHeap([5, 2, 7, 4, 1, 9]) # with a list
 
 # Add items to the heap
 min_heap.push(10)
