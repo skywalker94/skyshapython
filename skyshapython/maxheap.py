@@ -78,6 +78,13 @@ class MaxHeap:
         if self._heap:
             return -self._heap[0]
         raise IndexError("peek from an empty MaxHeap")
+    
+    def popall(self):
+        """
+        Pops all remaining elements from the heap and returns them as a list.
+        If the heap is empty, returns an empty list.
+        """
+        return self.pop(len(self._heap)) if self._heap else []
 
     def __len__(self):
         """

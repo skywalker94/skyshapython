@@ -61,6 +61,9 @@ max_heap.pushpop([100, 200])  # Adds [100, 200], pops and returns the 2 largest 
 # It can pop multiple items at once
 max_heap.pop(2) # Outputs 2 largest values in order
 
+# pop all remaining values in descending order
+max_heap.popall()
+
 # Check if the heap is empty
 if max_heap:
     print("Heap is not empty")
@@ -109,6 +112,9 @@ min_heap.pushpop([100, 200])  # Adds [100, 200], pops and returns the 2 smallest
 
 # It can pop multiple items at once
 min_heap.pop(2)  # Outputs 2 smallest values in order
+
+# pop all remaining values in ascending order
+min_heap.popall()
 
 # Check if the heap is empty
 if not min_heap:
