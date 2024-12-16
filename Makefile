@@ -12,3 +12,6 @@ test:
 heap-test:
 	pytest tests/test_max_heaps.py
 	pytest tests/test_min_heaps.py
+
+sort-test:
+	pytest tests/test_sort_master.py
