@@ -5,9 +5,16 @@ class MinHeap:
     A simple MinHeap implementation using Python's built-in heapq library.
     """
 
-    def __init__(self):
+    def __init__(self, values=None):
         """Use a list to store the heap elements."""
         self._heap = []
+        if values:
+            if isinstance(values, list):
+                for item in values:
+                    self.push(item)
+            else:
+                self.push(values)
+        
 
     def push(self, items):
         """
